@@ -13,6 +13,7 @@
   "dependencies": {
     "@types/react-slick": "^0.23.13",
     "chart.js": "^4.4.6",
+    "dotenv": "^16.4.5",
     "emailjs-com": "^3.2.0",
     "html-react-parser": "^5.1.18",
     "maplibre-gl": "^4.7.1",
