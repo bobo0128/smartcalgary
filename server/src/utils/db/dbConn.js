@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const MONGO_URI = process.env.MONGODBURL;
+const MONGO_URI = process.env.MONGODBURL || 'mongodb+srv://smart_community:oaXMFoJ93ZTWrFx3@cluster0.hr27m.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 //console.log("DBconn file: " + MONGO_URI);
 let connection = null;
 
