@@ -1,0 +1,60 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Ensure the content stays at the bottom */
+    align-items: center;
+    width: 100%; /* Full width of the screen */
+    color: white; /* Text color */
+    text-align: center;
+}
+
+.footer-image-wrapper {
+    width: 100%; /* Full width */
+    height: 300px; /* Adjust this value as needed for your design */
+    position: relative; /* To keep image and text separate */
+}
+
+.footer-image {
+    width: 100%; /* Make the image take up the full width */
+    height: 100%; /* Make the image height 100% of the container */
+    object-fit: cover; /* Ensure the image covers the space without distortion */
+}
+
+.footer-content {
+    padding: 20px;
+    width: 100%; /* Ensure content stretches across */
+    text-align: center;
+}
+
+footer p {
+    margin: 0; /* Remove default margin */
+    font-size: 14px; /* Adjust font size as needed */
+}
+
+@media (max-width: 768px) {
+    .footer-image-wrapper {
+        height: 200px; /* Reduce image height on smaller screens */
+    }
+
+    .footer-content {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    footer p {
+        font-size: 12px; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-image-wrapper {
+        height: 150px; /* Further reduce image height for very small screens */
+    }
+
+    .footer-content {
+        padding: 10px; /* Reduce padding for very small screens */
+    }
+
+    footer p {
+        font-size: 10px; /* Reduce font size on very small screens */
+    }
+}

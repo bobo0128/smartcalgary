@@ -1,0 +1,57 @@
+.dropdown-filter-wrapper {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;
+  width: 50%; /* Take full width */
+  height: 30%;
+  box-sizing: border-box; /* Include padding/borders in total width/height */
+  margin-top: 0px;
+  bottom: 0;
+  position: absolute;
+}
+
+
+.dropdown-filter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Ensures the component uses full width of parent */
+  box-sizing: border-box; /* Include padding and border in element's total width/height */
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column; /* Stack label and select vertically */
+  width: 100%; /* Ensures group takes the full width of the container */
+  align-items: center;
+  justify-content: center;
+}
+
+.filter-label {
+  margin-bottom: 8px; /* Adds spacing between label and select */
+  font-size: 14px;
+  word-wrap: break-word; /* Allows text to wrap if the label is long */
+}
+
+.year-select {
+  width: 100%; /* Forces dropdown to use full width of container */
+  max-width: 100%; /* Prevents it from growing beyond its parent */
+  padding: 8px; /* Add some padding for better usability */
+  font-size: 14px; /* Adjust font size for better readability */
+  box-sizing: border-box; /* Ensure padding doesn't overflow container */
+  border: 1px solid #ccc; /* Adds a border for visual clarity */
+  border-radius: 4px; /* Rounds the corners slightly */
+}
+
+@media (max-width: 768px) {
+  /* Responsive design for smaller screens */
+  .dropdown-filter-container {
+    align-items: stretch; /* Aligns items to fill the available space */
+  }
+
+  .year-select {
+    font-size: 8px; /* Adjust font size for smaller screens */
+    padding: 6px; /* Reduce padding for a compact design */
+  }
+}

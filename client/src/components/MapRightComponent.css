@@ -1,0 +1,36 @@
+.map-right-container {
+    display: flex;
+    flex-direction: column; /* Stack items by default */
+    align-items: stretch;
+    justify-content: space-between;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 5px;
+    gap:5px;
+  }
+  
+  .dropdown-filter-wrapper {
+    flex-grow: 1;
+  }
+  
+  .legend-wrapper {
+    width: 100%;
+    margin-top: auto;
+  }
+  
+  /* Media Queries for Smaller Screens */
+  @media (max-width: 768px) {
+    .map-right-container {
+      flex-direction: column; /* Keep items stacked */
+      gap: 10px; /* Adjust spacing */
+    }
+  
+    .dropdown-filter-wrapper {
+      order: 1; /* Ensure Dropdown appears first */
+    }
+  
+    .legend-wrapper {
+      order: 2; /* Legend appears below Dropdown */
+    }
+  }
+  

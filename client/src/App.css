@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+#root {
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+  width: 80%;
+  max-width: 1200px;
+}
+
+/* .logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+} */
+
+.App {
+  display: flex;
+  flex-direction: column;
+  /* Stack components vertically */
+  padding: 20px;
+  /* Optional: Add padding around the entire app */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid #ccc;
+  border-radius: 10px; */
+}
+
+.App>* {
+  flex: 1;
+  /* This makes each child component have the same width */
+  box-sizing: border-box;
+  /* Ensures padding doesn't overflow the width */
+}
+
+.content {
+  max-width: 1200px; /* Set a maximum width for the content */
+  margin: 0 auto; /* Center the content horizontally */
+  padding: 20px; /* Add padding for spacing */
+  overflow: hidden; /* Prevent any child elements from overflowing */
+  box-sizing: border-box; /* Include padding and borders in the width/height */
+  /* border: 1px solid #ccc;
+  border-radius: 10px; */
+  width:100%;
+}
+
+/* Universal Styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  /* Universal font */
+  font-size: 16px;
+  /* Base font size */
+  color: #333;
+  /* Universal text color */
+  background-color: #fff;
+  /* Universal background color */
+  line-height: 1.5;
+  /* Consistent line height */
+}
+
+/* .container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 10px;
+  padding: 10px;
+}
+
+.section {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  flex: 1 1 auto;
+} */
+
+/* Universal Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Open Sans", sans-serif;
+  /* Consistent headings font */
+  color: #222;
+  /* Darker text for headings */
+  margin: 0 0 10px;
+}
+
+.universal-color {
+  background-color: rgb(200, 16, 46);
+}
+
+.section-background-color {
+  background: #f1f1f1;
+}
+
+/*header style*/
+.header-title-color {
+  color: #FFFFFF;
+}
+
+.menu-item-color {
+  color: #FFFFFF;
+}
+
+/*header style*/
+
+.section-header {
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.section-container {
+  padding: 10px;
+  margin-top: 20px;
+}
+
+p {
+  margin: 0 0 10px;
+  font-size: 1rem;
+  /* Relative sizing for consistency */
+  text-align: left;
+}
+
+/* Links */
+a {
+  color: rgb(200, 16, 46);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: rgb(75, 79, 85);
+}
+
+.customized-button {
+  font-family: inherit;
+  font-size: 0.8rem;
+  padding: 10px 20px;
+  background-color: rgb(200, 16, 46) !important;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.customized-button:focus {
+  outline: none;
+  /* Remove focus outline */
+  box-shadow: none;
+  /* Remove focus shadow */
+}
+
+.customized-button:active {
+  transform: none;
+  /* Prevent button press effect */
+  background: none;
+  /* Remove active state background */
+}
+
+.customized-button:visited {
+  color: inherit;
+  /* Maintain color consistency */
+}
+
+/* Scroll-to-Top Button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  /* Position from the bottom */
+  right: 20px;
+  /* Position from the right */
+  background-color: white;
+  /* Primary color */
+  color: rgb(200, 16, 46);
+  border: none;
+  border-radius: 20%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(222, 222, 228, 0.2);
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0.8;
+  /* Slightly transparent */
+}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.scroll-to-top:hover {
+  opacity: 1;
+  /* Fully opaque on hover */
+  transform: scale(1.1);
+  /* Slight zoom effect */
+}
+
+.scroll-to-top:active {
+  transform: scale(1);
+  /* Reset scale on click */
+}
+
+
+/* Responsive Design */
+@media (max-width: 1760px) {
+  .container {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 1440px) {
+  .container {
+    gap: 8px;
+  }
+
+  .section {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 5px;
+    width: 95%;
+  }
+
+  button {
+    width: 100%;
+    /* Make buttons fill container */
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+  }
+
+  body {
+    font-size: 14px;
+    /* Slightly smaller font size for small screens */
+  }
+
+  .section {
+    padding: 10px;
+  }
+}
+
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}

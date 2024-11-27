@@ -1,0 +1,87 @@
+/* Wrapper for each table to control size */
+.table-wrapper {
+    flex: 1;
+    height: 400px; /* Default height for tables */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 10px;
+}
+
+/* Table container for scrollable content */
+.table-container {
+    flex: 1;
+    overflow-y: auto; /* Scrollable content for larger tables */
+    display: block;
+    font-size: 0.9em;
+    width: 100%;
+}
+
+/* Table styles */
+.styled-table {
+    width: 100%;
+    table-layout: fixed; /* Ensure consistent column sizing */
+    border-collapse: collapse;
+}
+
+.styled-table thead tr {
+    color: #ffffff;
+    text-align: left;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.styled-table th:first-child,
+.styled-table td:first-child {
+    width: 60%;
+}
+
+.styled-table th:not(:first-child),
+.styled-table td:not(:first-child) {
+    width: calc(40% / var(--remaining-cols, 1));
+}
+
+/* Alternate row styling */
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+/* Equal table heights for smaller screens */
+@media (max-width: 768px) {
+    .table-wrapper {
+        height: auto; /* Allow adaptive height */
+        max-height: 400px; /* Uniform max height for all tables */
+        overflow: hidden;
+    }
+
+    .table-container {
+        height: 100%; /* Match parent wrapper height */
+        overflow-y: auto; /* Add vertical scrolling for larger content */
+    }
+}
+
+/* Compact design for very small screens */
+@media (max-width: 480px) {
+    .table-wrapper {
+        height: auto; /* Adaptive height for all tables */
+        max-height: 300px; /* Reduce maximum height for smaller screens */
+    }
+
+    .table-container {
+        height: 100%;
+        font-size: 0.8em; /* Reduce font size for better fit */
+        overflow-y: auto;
+    }
+}

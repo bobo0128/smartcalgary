@@ -1,0 +1,142 @@
+/* Header Component Style */
+.header-container{
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.header-title {
+  font-size: 24px;
+  margin: 0;
+  padding: 30px;
+}
+
+/* .menu-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 10px;
+}
+
+#logo {
+  margin: 0 auto; /* Center the div within its parent */
+  text-align: center; /* Ensure the content inside is centered */
+  display: flex; /* Flexbox for centering */
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering */
+}
+
+#logo img {
+  max-width: 50%; /* Ensure the logo remains responsive */
+  height: auto; /* Maintain aspect ratio */
+  align-items: center;
+}
+
+/* Hamburger Button */
+.hamburger-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  display: none; /* Default hidden */
+  text-align: center;
+  outline: none; /* Remove focus outline */
+}
+
+/* Remove hover effect */
+.hamburger-button:hover {
+  background: none; /* Prevent background change */
+  color: inherit; /* Prevent color change */
+  outline: none; /* Prevent any hover outlines */
+}
+
+/* Remove active effect */
+.hamburger-button:active {
+  background: none; /* No background on active */
+  transform: none; /* No press effect */
+}
+
+/* Remove focus outline */
+.hamburger-button:focus {
+  outline: none;
+}
+
+
+.header-menu {
+  display: flex;
+  gap: 70px;
+  margin: 0;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+
+
+.menu-item {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.menu-item:hover {
+  text-decoration: underline;
+}
+
+/* Small screens: Toggle menu */
+@media (max-width: 768px) {
+
+
+  .hamburger-button {
+    display: block; /* Show hamburger button */
+    text-align: left;
+    width: 20px;
+  }
+
+  .header-menu.closed {
+    display: none; /* Hide menu */
+  }
+
+  .header-menu {
+    gap:2px;
+  }
+  .header-menu.open {
+    display: flex;
+    flex-direction: column; /* Stack items for mobile */
+    position: absolute;
+    top: 120px; /* Adjust based on your header height */
+    left: 34%;
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 100;
+    width: 100px;
+    align-items: center;
+  }
+
+  .menu-item {
+    text-align: center; /* Center the text horizontally */
+    width: 100%; /* Ensure the item spans the full width */
+    padding: 10px 0; /* Add padding for better touch interaction */
+  }
+}

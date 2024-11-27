@@ -1,0 +1,61 @@
+form {
+    max-width: 500px;
+    margin: 20px auto; /* Center the form horizontally */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Full width */
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+textarea {
+    height: 100px; /* Fixed height for text area */
+    resize: vertical; /* Allow vertical resize only */
+}
+
+button[type="submit"] {
+    width: 100%; /* Full width */
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #6A1717;
+}
+
+/* Optional: Add hover effect and focus outline */
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #6A1717;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.error {
+    color: red; /* Red font color for error */
+    font-size: 16px; /* Same font size as input fields */
+    margin-top: 5px; /* Small space above the error message */
+    font-weight: bold; /* Makes the error message bold */
+    width: 100%; /* Same width as the input fields */
+    padding: 10px; /* Padding like the input fields */
+    background-color: #f9f9f9; /* Light background like input fields */
+}
+

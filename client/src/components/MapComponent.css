@@ -1,0 +1,93 @@
+/* General container styles */
+.map-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  
+  /* Map and Right Pane Styling */
+  .map-pane {
+    height: 60vh;
+    background-color: #f0f0f0;
+    flex: 4 1 0%;
+  }
+  
+  .right-pane {
+    height: 60vh;
+    flex: 1 1 0%;
+  }
+  
+  /* Media Queries for Smaller Screens */
+
+  @media (max-width: 1760px) {
+    .map-pane {
+      height: 60vh;
+      background-color: #f0f0f0;
+      flex: 3 1 0%;
+    }
+    
+    .right-pane {
+      height: 60vh;
+      flex: 1 1 0%;
+    }
+  }
+
+  @media (max-width: 1440px) {
+    .map-pane {
+      height: 60vh;
+      background-color: #f0f0f0;
+      flex: 2 1 0%;
+    }
+    
+    .right-pane {
+      height: 60vh;
+      flex: 1 1 0%;
+    }
+  }
+
+  @media (orientation: portrait) and (min-width: 768px) {
+    .map-container {
+      flex-direction: column-reverse; /* Stack Right Pane above Map */
+      gap: 20px; /* Add space between stacked elements */
+    }
+  
+    .map-pane {
+      flex: 1 1 auto; /* Allow Map to grow and shrink naturally */
+      height: 300px; /* Adjust map height for portrait orientation */
+    }
+  
+    .right-pane {
+      flex: 1 1 auto;
+      height: auto;
+      padding: 10px; /* Add padding for spacing */
+    }
+  }
+
+  @media (max-width: 768px) {
+    .map-container {
+      flex-direction: column-reverse; /* Stack Map and Right Pane vertically */
+      gap: 2px; /* Add space between stacked elements */
+    }
+  
+    .map-pane {
+      flex: 1 1 auto; /* Allow Map to grow and shrink naturally */
+      height: 300px; /* Adjust map height for smaller screens */
+    }
+  
+    .right-pane {
+      flex: 1 1 auto; /* Allow Right Pane to grow and shrink naturally */
+      height: auto; /* Adjust height to fit content */
+      padding: 10px; /* Add some padding for spacing */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .map-pane {
+      height: 200px; /* Further reduced height */
+    }
+  }
+  

@@ -1,0 +1,156 @@
+/* Container for the legend */
+.legend-container {
+    background-color: #ebe9e8;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 100%; /* Limit the maximum width to the parent's width */
+    height: auto; /* Allow it to adjust height based on content */
+    max-height: 100%; /* Prevent it from exceeding the parent's height */
+    overflow: auto; /* Enable scrolling if content overflows */
+    box-sizing: border-box; /* Include padding in width/height calculations */
+}
+
+/* Individual legend item */
+.legend-item {
+    display: flex;
+    align-items: center;
+    /* flex: 1 1 calc(25% - 10px); */
+    margin-bottom: 5px;
+    flex-shrink: 0;
+}
+
+/* Color box in legend */
+.legend-color {
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+    border: 1px solid #000;
+}
+
+/* Label text in legend */
+.legend-label {
+    font-size: 0.8em;
+    font-family: Arial, sans-serif;
+    white-space: nowrap;
+}
+
+/* Adjust layout for smaller screens */
+@media (orientation: landscape) {
+    .legend-container {
+        flex-direction: column; /* Legend items in a column for wider screens */
+        gap: 10px;
+    }
+}
+
+/* Portrait mode (height > width) */
+
+
+@media (max-width: 1400px) {
+    .legend-container {
+      flex-direction: column; /* Change to row layout */
+      flex-wrap: wrap; /* Allow items to wrap to new rows */
+      gap: 10px; /* Reduce spacing between items */
+    }
+  }
+
+  @media (max-width: 950px) {
+    .legend-container {
+      flex-direction: column; /* Change to row layout */
+      flex-wrap: wrap; /* Allow items to wrap to new rows */
+      gap: 6px; /* Reduce spacing between items */
+    }
+    .legend-label {
+        font-size: 0.8em; /* Smaller font size for very small screens */
+      }
+  }
+@media (max-width: 768px) {
+    .legend-container {
+      flex-direction: row; /* Change to row layout */
+      flex-wrap: wrap; /* Allow items to wrap to new rows */
+      gap: 5px; /* Reduce spacing between items */
+    }
+  
+    .legend-item {
+      flex: 1 1 calc(50% - 10px); /* Two items per row */
+    }
+
+    .legend-label {
+        font-size: 0.6em; /* Smaller font size for very small screens */
+      }
+  }
+  
+  @media (max-width: 480px) {
+    .legend-container {
+      gap: 2px; /* Maintain spacing */
+    }
+  
+    .legend-item {
+      flex: 1 1 calc(50% - 10px); /* One item per row on very small screens */
+    }
+  
+    .legend-label {
+      font-size: 0.5em; /* Smaller font size for smaller screens */
+    }
+  }
+
+  @media (max-width: 424px) {
+    .legend-container {
+      gap: 1px; /* Maintain spacing */
+    }
+  
+    .legend-item {
+      flex: 1 1 calc(50% - 10px); /* One item per row on very small screens */
+    }
+  
+    .legend-label {
+      font-size: 0.4em; /* Smaller font size for smaller screens */
+    }
+  }
+
+  @media (orientation: portrait) and (min-width: 768px) {
+    .legend-container {
+        flex-direction: row; /* Arrange legend items in a row for portrait mode */
+        /* flex-wrap: wrap; */
+        gap: 10px;
+    }
+
+    .legend-item {
+        flex: 1 1 calc(50% - 10px); /* Two items per row in portrait mode */
+    }
+}
+
+@media (orientation: portrait) and (min-width: 340px) {
+    .legend-container {
+        flex-direction: row; /* Arrange legend items in a row for portrait mode */
+        /* flex-wrap: wrap; */
+        gap: 0px;
+    }
+
+    .legend-item {
+        flex: 1 1 calc(50% - 10px); /* Two items per row in portrait mode */
+    }
+    .legend-label {
+        font-size: 0.3em; /* Smaller font size for smaller screens */
+      }
+}
+
+@media (orientation: portrait) and (min-width: 768px) {
+    .legend-container {
+        flex-direction: row; /* Arrange legend items in a row for portrait mode */
+        /* flex-wrap: wrap; */
+        gap: 0px;
+    }
+
+    .legend-item {
+        flex: 1 1 calc(25% - 10px); /* Two items per row in portrait mode */
+    }
+    .legend-label {
+        font-size: 0.3em; /* Smaller font size for smaller screens */
+      }
+}

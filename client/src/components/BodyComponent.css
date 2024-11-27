@@ -1,0 +1,10 @@
+.description {
+    text-align: left; /* Aligns all text inside the section to the left */
+    padding: 10px;
+    margin-top: 20px;
+  }
+  
+  .description h3,
+  .description p {
+    margin: 0 0 10px 0; /* Optional: Adds spacing between the text elements */
+  }

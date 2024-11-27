@@ -1,0 +1,55 @@
+/* Default styles for the detailsDiv and child-div */
+#detailsDiv {
+  overflow: hidden; /* Prevent content overflow */
+  display: flex; /* Enables Flexbox layout */
+  flex-direction: row; /* Ensures children align horizontally */
+  justify-content: center; /* Centers children horizontally */
+  align-items: center; /* Aligns children vertically */
+  gap: 30px; /* Adds spacing between children */
+  width: 100%; /* Ensures full width */
+  max-height: 500px; /* Fixed height */
+  margin-top: 10px; /* Adds spacing above the container */
+  padding: 10px; /* Adds spacing inside the container */
+  border-radius: 5px;
+  flex-wrap: nowrap; /* Prevents wrapping to the next row */
+}
+
+.child-div {
+  flex: 1; /* Ensures equal space distribution */
+  max-width: 45%; /* Prevents children from exceeding parent width */
+  max-height: 100%; /* Ensures children fit within parent height */
+  overflow: auto; /* Adds scrollbars for overflowing content */
+  padding: 10px; /* Adds spacing inside the child container */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  #detailsDiv {
+    flex-direction: column; /* Stack child elements vertically */
+    align-items: stretch; /* Ensure children take full width */
+    gap: 20px; /* Adjust spacing between stacked elements */
+    max-height: none; /* Allow height to grow with content */
+  }
+
+  .child-div {
+    max-width: 100%; /* Allow child to take full width */
+    margin-right: 20px; /* Remove right margin */
+  }
+}
+
+/* Additional styles for extra small screens (e.g., phones) */
+@media (max-width: 480px) {
+  #detailsDiv {
+    padding: 5px; /* Reduce padding for smaller screens */
+    gap: 15px; /* Adjust spacing for small devices */
+  }
+
+  .child-div {
+    padding: 5px; /* Reduce padding inside child containers */
+    font-size: 14px; /* Adjust font size for smaller screens */
+    margin-right: 10px;
+  }
+}
