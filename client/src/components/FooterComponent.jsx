@@ -11,7 +11,7 @@ const FooterComponent = () => {
                     <img src={background} alt="Calgary Landscape" className="footer-image" />
                 </div>
                 <div className="footer-content universal-color">
-                    <p><center>© 2024 Community Crime App. All rights reserved.</center></p>
+                    <p><center>© 2024 Smart Calgary. All rights reserved.</center></p>
                 </div>
             </footer>
         </div>

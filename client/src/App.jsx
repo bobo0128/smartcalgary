@@ -6,6 +6,7 @@ import "./App.css";
 import BodyComponent from "./components/BodyComponent";
 import ContactUsComponent from "./components/ContactUsComponent";
 import FooterComponent from "./components/FooterComponent";
+import ResourcesComponent from "./components/ResourcesComponent";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -38,10 +39,12 @@ function App() {
       <HeaderComponent />
       <BodyComponent />
       <MapComponent />
+      <ResourcesComponent />
       <NewsFeedComponent />
       <div id="contact" className="section-container">
         <ContactUsComponent />
       </div>
+
       <FooterComponent />
       {showArrow && (
         <FaArrowUp className="scroll-to-top" onClick={scrollToTop} />

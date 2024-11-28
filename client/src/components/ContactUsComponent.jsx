@@ -64,7 +64,7 @@ const ContactUsComponent = () => {
 
     return (
         <form onSubmit={sendEmail}>
-            <h3>Contact Us</h3>
+            <h3>Feedback</h3>
             <input
                 type="text"
                 name="name"

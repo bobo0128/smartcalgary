@@ -35,7 +35,8 @@ const HeaderComponent = () => {
           <button className="customized-button menu-item menu-item-color" onClick={() => scrollToSection("home")}>Home</button>
           <button className="customized-button menu-item menu-item-color" onClick={() => scrollToSection("map")}>Map</button>
           <button className="customized-button menu-item menu-item-color" onClick={() => scrollToSection("news")}>News Feed</button>
-          <button className="customized-button menu-item menu-item-color" onClick={() => scrollToSection("contact")}>Contact</button>
+          <button className="customized-button menu-item menu-item-color" onClick={() => scrollToSection("contact")}>Feedback</button>
+          <button className="customized-button menu-item menu-item-color" onClick={() => scrollToSection("resources")}>Resources</button>
         </nav>
       </div>
     </header>

@@ -1,0 +1,73 @@
+/* Default Table Styles (No changes) */
+.resource-section-container {
+    padding: 20px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px; /* Limits table width for larger screens */
+}
+
+.resource-styled-table {
+    width: 100%; /* Makes table span the full width of its container */
+    table-layout: fixed; /* Ensures consistent column widths */
+    border-collapse: collapse; /* Removes gaps between table cells */
+    word-wrap: break-word; /* Wraps long text in table cells */
+    border-radius: 12px; /* Rounds the table corners */
+    overflow: hidden; /* Ensures rounded corners apply to the content */
+    margin: 0 auto; /* Centers the table */
+}
+
+.resource-styled-table th,
+.resource-styled-table td {
+    text-align: left;
+    padding: 12px; /* Adds consistent padding to table cells */
+    border: 1px solid #ddd; /* Adds a border to table cells */
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    vertical-align: top; /* Ensures content aligns neatly at the top */
+    white-space: normal; /* Allows text to wrap instead of overflowing */
+}
+
+.resource-styled-table th {
+    background-color: #002d72; /* Header background color */
+    color: white; /* Header text color */
+    font-weight: bold;
+    text-align: center; /* Centers header text */
+}
+
+/* Responsive Design: Stack columns into rows on small screens */
+@media (max-width: 768px) {
+    .resource-styled-table {
+        display: grid;
+        grid-template-columns: 1fr; /* Stacks items vertically */
+        border: none; /* Remove borders for cleaner look in rows */
+    }
+
+    .resource-styled-table thead {
+        display: none; /* Hide table header */
+    }
+
+    .resource-styled-table tr {
+        display: grid;
+        grid-template-columns: 1fr; /* Stack data within each row */
+        margin-bottom: 10px; /* Add spacing between rows */
+        border: 1px solid #ddd; /* Add border around each "card" */
+        border-radius: 8px; /* Round the "card" corners */
+        padding: 10px;
+    }
+
+    .resource-styled-table td {
+        display: flex;
+        flex-direction: column; /* Stack header and data vertically */
+        text-align: left;
+        border: none; /* Remove cell borders inside the card */
+        padding: 5px 0; /* Reduce padding for smaller screens */
+    }
+
+    .resource-styled-table td::before {
+        content: attr(data-label); /* Use the header as a label */
+        font-weight: bold;
+        font-size: 14px;
+        color: #002d72;
+        margin-bottom: 5px; /* Add spacing between label and data */
+    }
+}

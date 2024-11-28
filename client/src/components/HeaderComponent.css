@@ -80,7 +80,7 @@
 
 .header-menu {
   display: flex;
-  gap: 70px;
+  gap: 30px;
   margin: 0;
   flex-direction: row;
   justify-content: center;
